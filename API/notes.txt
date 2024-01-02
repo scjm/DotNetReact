@@ -1,0 +1,19 @@
+You can start the application in the APi folder, using
+$ dotnet watch
+
+To view the Database - use the below command in the command palette:
+sqlite Open Database
+To view the Database - use the > command on the left (click the > arrow) and
+you will see a new directory called "SQLITE EXPLORER"
+
+Hot relod has a number of issues in dotnet 7 - so, turn it off:
+$ dotnet watch --no-hot-reload
+
+If you lose the SQLite explorer, go to the command line and enter "SQLITE EXPLORER", alternatively,
+the path to the SQLite db may already be showing in the command palette, then you can simply click
+that URL
+
+.dll files are not needed when you push to github - as these are recreated each time you build
+the project
+dotnet provides a boilerplate for gitignore that removes unecessary files:
+$ dotnet new gitignore
